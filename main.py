@@ -54,9 +54,9 @@ def process_config(config_path: str, env_path: str):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Randalf: Gestione automatica password in .env")
-    parser.add_argument("-i", "--input", required=True, help="Path al file di configurazione YAML")
-    parser.add_argument("-f", "--envfile", required=True, help="Path al file .env da modificare")
+    parser = argparse.ArgumentParser(description="Randalf: Automatic Password Provisioner")
+    parser.add_argument("-i", "--input", required=True, help="Path to the YAML configuration file")
+    parser.add_argument("-f", "--envfile", required=True, help="Path to the .env file to edit")
 
     args = parser.parse_args()
     process_config(args.input, args.envfile)
