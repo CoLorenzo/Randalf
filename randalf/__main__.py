@@ -1,5 +1,6 @@
-#! /usr/bin/env python3
+#!/usr/bin/env python3
 
+# Modules must be at the top
 import argparse
 import yaml
 import os
@@ -49,14 +50,17 @@ def process_config(config_path: str, env_path: str):
         if key in env_vars:
             env_vars[key] = generate_password(default_length)
 
-
     save_env_file(env_path, env_vars)
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Randalf: Automatic Password Provisioner")
     parser.add_argument("-i", "--input", default="config.yml", help="Path to the YAML configuration file")
     parser.add_argument("-f", "--envfile", default=".env", help="Path to the .env file to edit")
 
     args = parser.parse_args()
     process_config(args.input, args.envfile)
+
+
+if __name__ == "__main__":
+    main()
