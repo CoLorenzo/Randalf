@@ -1,4 +1,4 @@
-# You shall no password
+# You shall not password
 Randalf is a CLI tool to provision or regenerate secrets in `.env` files based on a YAML configuration.  
 Don’t leave default passwords in your `.env` files — generate them randomly.  
 
