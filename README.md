@@ -3,14 +3,14 @@ Randalf is a CLI tool to provision or regenerate secrets in `.env` files based o
 Don’t leave default passwords in your `.env` files — generate them randomly.  
 
 
-## ✨ Features
+## Features
 
 - Automatically generates secure passwords for missing or all `.env` keys
 - Declarative configuration via `config.yml`
 - Works well with Docker, CI/CD, and secret bootstrapping
 - Lightweight and pipx-installable
 
-## 📦 Prerequisites
+## Prerequisites
 
 - Python 3.7+
 - `pipx` installed (recommended for CLI tools)  
@@ -21,7 +21,7 @@ Don’t leave default passwords in your `.env` files — generate them randomly.
   python3 -m pipx ensurepath
 
 
-## 🚀 Installation
+## Installation
 
 Install Randalf directly from the GitHub repository using pipx:
 
@@ -29,7 +29,7 @@ Install Randalf directly from the GitHub repository using pipx:
 pipx install git+https://github.com/CoLorenzo/Randalf.git
 ```
 
-## 🧾 Usage
+## Usage
 
 ```bash
 randalf -i ./config.yml -f ./.env
@@ -47,7 +47,7 @@ You can omit the parameters and Randalf will default to:
 randalf -i config.yml -f .env
 ```
 
-## 🛠️ Configuration Format
+## Configuration Format
 
 Here is an example `config.yml`:
 
@@ -68,7 +68,7 @@ always_override:
 * `only_if_empty`: only generate if the variable is missing or empty
 * `always_override`: always replace the value, even if one already exists
 
-## 📁 Docker (optional)
+## Docker (optional)
 
 If you prefer Docker:
 
